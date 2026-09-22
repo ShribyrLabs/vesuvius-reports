@@ -1,4 +1,4 @@
-# PHerc0826: the First Letters workflow end to end, with a reader validated on two unseen scrolls — no letters
+# PHerc0826: the First Letters workflow end to end, with a reader validated on two unseen scrolls: no letters
 
 **In one sentence:** Three spiral-fitted bands and 21 published body patches of PHerc0826 (9.362 µm, 113 keV) were
 rendered and read with the released `ink_9um` checkpoints and with a reader fine-tuned to read native 9 µm text;
@@ -15,7 +15,7 @@ round blobs with no line structure on all 71 windings.
 pre-registered null on about 6 % of the roll's height, with the ink threshold calibrated on the released checkpoint's
 own training letters.
 
-**After this report:** Three more bands (z 2200–3200, 3200–4200, 4300–5300 — 2.4 to 32 mm from one end of the
+**After this report:** Three more bands (z 2200–3200, 3200–4200, 4300–5300: 2.4 to 32 mm from one end of the
 134 mm roll) and 24 GrowPatch body patches (z 6100–14 600, ~170 cm², Ben Black's release) are also null, this time
 with a reader that draws letters on native 9 µm scans it never trained on. Anyone planning a PHerc0826 attempt can
 skip these regions and this reader, and knows which stages of the workflow silently fail.
@@ -46,17 +46,17 @@ The gates and failure list below are the part I would have wanted before startin
    0.75–0.79.
 3. **Render.** `vc_render_tifxyz` (28 slices) or the GPU port `scripts/render_gpu.py` (validated against it). Checked:
    our render of the published Paris 4 mesh matches the published surface volume slice for slice at r 0.93, and the
-   published PHerc0139 w035 volume at r 1.000 — **only with `--flip-normals`** for staff meshes.
+   published PHerc0139 w035 volume at r 1.000: **only with `--flip-normals`** for staff meshes.
 4. **Reader.** Released `scrollprize/ink_9um` (seeds 42/43, steps 20 k and 75 k), then a fine-tune (below). Both
    depth directions always.
 5. **Score.** `scripts/score_0826_ink.py`: fraction of sheet above 128, 99th percentile, seed-42-vs-43 agreement,
    line-pitch autocorrelation; pictures at text scale.
 
-### The reader had to be fixed first — the released checkpoint memorises on native 9 µm data
+### The reader had to be fixed first: the released checkpoint memorises on native 9 µm data
 
 On PHerc0139 w035 at native 9.362 µm (a training segment of `ink_9um`), the released model's two seeds agree at
 0.948 inside the few chunks that carried training labels and draw crisp letters there; on the rest of the same sheet
-— dense text under every patch according to the 2.4 µm key — agreement drops to 0.60 and the output is blobs. So on
+- dense text under every patch according to the 2.4 µm key: agreement drops to 0.60 and the output is blobs. So on
 native 9 µm data the released model reproduces its labels rather than reading, and a null from it means nothing.
 
 Fix: project PHerc0139's published 2.4 µm ink predictions onto native 9 µm renders of 35 segments (registration
@@ -68,7 +68,7 @@ verified on the hand-labelled w035: r 0.588, precision 0.70 / recall 0.64 agains
 - **Unseen scroll PHerc0172 w070** (7.91 µm / 53 keV, resampled to 9.36 µm): r **0.55** against the published
   map, the same Greek lines in the same places (figure). Native 7.91 µm scored lower (0.46): the reader's home scale
   is 9.36 µm.
-- **Unseen scroll PHerc0814 p46527** (9.362 µm / 113 keV — the 0826 setting): "ΙΟΝΤ" legible by eye, r 0.66.
+- **Unseen scroll PHerc0814 p46527** (9.362 µm / 113 keV: the 0826 setting): "ΙΟΝΤ" legible by eye, r 0.66.
 
 Scripts: `scripts/build_pseudo_labels.py`, `scripts/make_finetune_config.py`, `scripts/eval_pseudo_heldout.py`.
 
@@ -91,7 +91,7 @@ fine-tunes 1.3 h. No cloud cost; ~17 GB of CT crop per band on local disk.
    points are snapped to the nearest bright voxel. Rendering it would have produced papyrus texture unrelated to
    any single sheet. Fixed by turning tracks on and checking the overlay before rendering.
 2. **The point-intensity "on-sheet" gate measured nothing.** On the *validated* Paris 4 fit it gave 0.014 vs 0.51
-   snapped — the same "not on sheets" verdict as the bad mesh — because a 9.6 µm "sheet" is a bundle of strands with
+   snapped: the same "not on sheets" verdict as the bad mesh: because a 9.6 µm "sheet" is a bundle of strands with
    air gaps, so a mid-plane point sits in a gap half the time. Replaced by the orientation gate above.
 3. **Seed agreement is not evidence after fine-tuning.** The two fine-tuned seeds agree at 0.94 on a known-bad (the
    held-out w042 read with depth reversed, r 0.18). Every discriminator must be re-checked on a known-bad for every
@@ -107,7 +107,7 @@ fine-tunes 1.3 h. No cloud cost; ~17 GB of CT crop per band on local disk.
    `model_initial_dr_per_winding` from it. The fine deformation field is nearly dormant at the default lr scale 0.2;
    1.0 engages it.
 
-### Limitations — what this null does and does not say
+### Limitations: what this null does and does not say
 
 - The bands were not chosen for text; z 2200–5300 is the first 32 mm of a 134 mm roll and could be margin. The
   body of the roll (z ≳ 6000) is crushed flat and the spiral fitter degrades there; the 21 body patches sample 24
@@ -121,4 +121,4 @@ fine-tunes 1.3 h. No cloud cost; ~17 GB of CT crop per band on local disk.
 
 ## Notes
 
-<!-- CHRIS: 3–6 sentences in your own words — why 0826, what you'd tell the next person, what you'd want from the team. -->
+<!-- CHRIS: 3–6 sentences in your own words: why 0826, what you'd tell the next person, what you'd want from the team. -->

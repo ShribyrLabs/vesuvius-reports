@@ -1,8 +1,8 @@
-# Cutting sheet merges out of a thick surface map: a zero-shot winding field, a ridge-guided cut, a measured ceiling — and why it does little for the released m7
+# Cutting sheet merges out of a thick surface map: a zero-shot winding field, a ridge-guided cut, a measured ceiling: and why it does little for the released m7
 
 **In one sentence:** Two post-processing cuts remove the bridges where a surface model has fused neighbouring
-sheets — one from a seismic "relative geologic time" network run zero-shot on scroll CT, one from non-maximum
-suppression of the model's own probability along the sheet normal — and the second improves a spiral fit on
+sheets: one from a seismic "relative geologic time" network run zero-shot on scroll CT, one from non-maximum
+suppression of the model's own probability along the sheet normal: and the second improves a spiral fit on
 PHerc0139 (held-out winding score 0.571 → 0.605); but the merges it removes are mostly the ones our rotation
 fine-tune creates, and on the released m7 checkpoint's own probabilities the cut changes 3–5 of 60 cubes.
 
@@ -24,7 +24,7 @@ through `vc_gen_normalgrids` unchanged).
 `scripts/rc_variants.py`, `scripts/rc_diag.py`, `scripts/rc_basem7.py`; raw outputs in `results/*.json`.
 
 **Why / where this is useful:** Open problem #3 (mergers between layers). For anyone whose surface model merges
-sheets through thickness — which the rotation fine-tune does — the ridge cut is a free 9-minute-per-band fix before
+sheets through thickness: which the rotation fine-tune does: the ridge cut is a free 9-minute-per-band fix before
 track extraction. For the released m7 as published, it is not (see below), which is itself worth knowing.
 
 - [x] I personally verified that the example and proof above were produced on the stated data.
@@ -35,7 +35,7 @@ track extraction. For the released m7 as published, it is not (see below), which
 
 Count pairs of label sheets (≥ 500 vox each) where one predicted connected component covers ≥ 30 % of both; the
 "tolerant" version assigns each label voxel to the nearest predicted piece within 3 vox so it also works on thin
-maps. The label itself dilated by 2 vox scores 0.40 pairs/cube — the floor thickness alone charges. Base m7 scores 0.60
+maps. The label itself dilated by 2 vox scores 0.40 pairs/cube: the floor thickness alone charges. Base m7 scores 0.60
 as scanned on the 60 cubes (strict scorer); our rotation fine-tune 0.97.
 
 ### 2. A winding-number field for free (`scripts/winding_split.py`, `scripts/zero_shot.py`)
@@ -54,7 +54,7 @@ The probability still peaks once per sheet across the sheet where the thresholde
 Non-maximum suppression along the structure-tensor normal (±1, ±2 vox) leaves one ridge per sheet; ridge voxels are
 labelled 26-connected; every map voxel is assigned to the nearest ridge component within 3 vox; voxels whose 3×3×3
 neighbourhood holds two assignments are removed. The map keeps its thickness (a one-voxel ridge map as fitter input
-collapses the winding count — tracks need thickness). Tile-wise, 192³ tiles, 24-vox pad; the library version
+collapses the winding count: tracks need thickness). Tile-wise, 192³ tiles, 24-vox pad; the library version
 reproduces the validated band cut to 1 % of the removed voxels.
 
 Cubes, tolerant scorer: mask 1.62 merges / 0.78 frags → **ridge cut 0.38 / 1.10** (field cut 1.02). Dense 0139
@@ -66,7 +66,7 @@ Of the 23 merged pairs that survive the cut on the 60 cubes, **18 (78 %) are mer
 probability has no dip between the two sheets, so there is nothing to cut along. Pre-registered reading: ≥ 70 % means
 the remaining merges are not a cut problem. A knob sweep (assignment radius 2, contact band 5³, both, a second pass
 inside big pieces) leaves merges at 0.38. Adding the raw CT to the ridge signal made it worse (0.50 / 1.40; CT alone
-0.33 merges at 6 fragments — shreds), although the CT itself still shows a gap at those sites (0.73 of the sheets' own
+0.33 merges at 6 fragments: shreds), although the CT itself still shows a gap at those sites (0.73 of the sheets' own
 value; control 0.76; within-sheet 0.88): the between-sheet dip is 1–3 vox wide and any blur that kills the CT speckle
 kills the dip too.
 
@@ -77,12 +77,12 @@ Pre-registered before writing this report: same 60 cubes, base m7's own probabil
 73/255: 43 → 38 (−12 %), 3 cubes changed. Bar was −50 %: **FAIL**. Base m7 merges half as often as the fine-tune on
 these cubes, and its remaining merges mostly have no probability dip. Two caveats cut both ways: PHerc1667 is in base
 m7's training set and was held out from the fine-tune, so this comparison flatters base; and the published surface
-maps on the data server are already thresholded (0/255), so the tool cannot take them as input at all — it needs the
+maps on the data server are already thresholded (0/255), so the tool cannot take them as input at all: it needs the
 probabilities from the inference run.
 
 ### Things that did not help (all pre-registered, all on the same band or cubes)
 
-Splitting tracks where the field jumps (same as random cuts); capping track length (hurts at every setting — the
+Splitting tracks where the field jumps (same as random cuts); capping track length (hurts at every setting: the
 fitter needs long tracks); a thin ridge map as drop-in fitter input (winding count collapses); dilating the ridge
 (reconnects the bridges); a scroll-native winding regressor trained on the recto labels (orders sheets but wanders
 within them, 4× the field's noise); label snapping to the CT face (agreement 0.37 → 0.43, bar 0.55; the ±3-vox

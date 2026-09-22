@@ -2,7 +2,7 @@
 
 **In one sentence:** `scrollprize/surface_m7_nnunet` scores below a plain CT threshold on sheets that lie across the
 scan axis, because it never saw one in training; fine-tuning it with random axis permutations restores those sheets on
-a held-out scroll without losing the as-scanned score — but the fine-tune merges neighbouring sheets more often, and
+a held-out scroll without losing the as-scanned score: but the fine-tune merges neighbouring sheets more often, and
 the two obvious recipe fixes for that both failed their gates.
 
 **One real example:** Starting from the proofread recto cubes (`seg-derived-recto-surfaces`), I swapped the z and y
@@ -20,7 +20,7 @@ follow the layers: mean |track tangent · CT sheet normal| 0.377 hosted → 0.18
 (59 k vs 54 k). A thresholded CT scores 0.189 but gives 27 % fewer tracks. `figures/0490A_tracks_hosted_finetune_ct.png`.
 
 **Proof:** the two figures above; `figures/0139_transpose_known_bad.png` (the same transpose on PHerc0139, where sheets
-run along z, turns clean sheets into blobs — so the transpose is a diagnostic, not a fix); numbers below from
+run along z, turns clean sheets into blobs: so the transpose is a diagnostic, not a fix); numbers below from
 `scripts/gate_eval.py` (volume-matched Dice on held-out cubes, as scanned and swapped, with the CT-threshold and
 shifted-mesh cheating baselines) and `scripts/track_metrics.py`.
 
@@ -36,7 +36,7 @@ architecture change. Scripts: `scripts/m7_label_train.py` (the fine-tune), `scri
 
 ### Also found: an air-ring artefact in the hosted maps
 
-The hosted `m7-L0-th0.2` maps carry a blocky stair-stepped band of "surface" in the air outside the scroll — 42–56 %
+The hosted `m7-L0-th0.2` maps carry a blocky stair-stepped band of "surface" in the air outside the scroll: 42–56 %
 of all lit voxels on PHerc0846A planes. Rerunning the same checkpoint on a PHerc0490A edge crop lights 0.1 % of air
 voxels vs 8.8 % hosted, so it is the hosting pipeline, not the model. Published tracks are barely affected (0.3–0.8 %
 of points outside the scroll). `figures/0490A_hosted_map_air_ring.png`.
@@ -49,14 +49,14 @@ from the loss), a random axis permutation and flips, cross-entropy + Dice, 6 000
 not in training.
 
 Leave-PHerc1667-out, 60 unseen cubes: as scanned 0.549 → 0.555; swapped 0.290 → **0.516** (CT threshold 0.325).
-A first run trained with 1667 in the set looked better as scanned (0.686) — that was same-scroll leakage, and it is
+A first run trained with 1667 in the set looked better as scanned (0.686): that was same-scroll leakage, and it is
 why the held-out version is the one reported.
 
 ### Spiral fits on PHerc0139
 
 Text band, same fitter config, 4 seeds each, hosted tracks vs fine-tune tracks from the same box, scored as the share
 of the fitted winding within 6 voxels of the hand-traced sheet: w042 0.562 vs 0.571 (tie); w035 0.334 ± 0.124 vs
-0.486 ± 0.061 (one-sided permutation p 0.04, rank test 0.057 — better on average, borderline).
+0.486 ± 0.061 (one-sided permutation p 0.04, rank test 0.057: better on average, borderline).
 
 ### The cost: more merged sheets
 

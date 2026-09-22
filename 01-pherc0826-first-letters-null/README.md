@@ -6,14 +6,14 @@
 
 **Before:** One published null on this scroll, z 10 000–11 000 (millerandmuller), with the ink threshold set on the released model's own training letters.
 
-**After:** Four more regions are null — 2 to 32 mm from one end of the roll, plus 24 spots through the body — with a reader you can trust more: on PHerc0172 and PHerc0814, which it never saw, it draws the same Greek lines as the published maps. Whoever tries 0826 next can skip these regions and this reader.
+**After:** Four more regions are null (2 to 32 mm from one end of the roll, plus 24 spots through the body), with a reader you can trust more. On PHerc0172 and PHerc0814, which it never saw, it draws the same Greek lines as the published maps. Whoever tries 0826 next can skip these regions and this reader.
 
 **Proof:** `figures/control_PHerc0172_w070_unseen_scroll_read.png` is what a real read looks like with this reader. `figures/0826_low_band_w030-w080_reader_montage.png` is 0826. Every number is in [DETAILS.md](DETAILS.md).
 
 **Why / where this is useful:** If you follow the workflow guide on a 9 µm scroll, these are the things that failed silently for me, in the order I hit them:
 
 - the first exported mesh was not on the sheets (`input_use_tracks` defaults to false; the fit had a pitch but no phase);
-- the released `ink_9um` memorises its training labels on native 9 µm data, so a null from it means nothing — I had to fine-tune it first;
+- the released `ink_9um` memorises its training labels on native 9 µm data, so a null from it means nothing. I had to fine-tune it first;
 - after fine-tuning, the two seeds agree at 0.94 on a known-bad, so seed agreement is not evidence either;
 - `--flip-normals` is required for staff meshes, and winding sense must be fitted both ways, not copied between scrolls.
 

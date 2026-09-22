@@ -1,6 +1,6 @@
 # Cutting merged sheets out of a surface map, and where that stops working
 
-**In one sentence:** A post-processing cut that separates sheets a surface model has fused, using the model's own probability ridges; it improves a spiral fit on PHerc0139 — but mostly because it fixes merges that my own fine-tune creates, not ones the released m7 makes.
+**In one sentence:** A post-processing cut that separates sheets a surface model has fused, using the model's own probability ridges; it improves a spiral fit on PHerc0139, but mostly because it fixes merges that my own fine-tune creates, not ones the released m7 makes.
 
 **One real example:** PHerc0139 text band, probability map from the fine-tune in report 03. `scripts/ridge_cut.py` removes 2.4 % of the voxels (53 min on 6 CPU cores, no GPU). Same track extraction, same spiral fit, 4 seeds each: held-out winding score 0.571 → 0.605, every cut seed above every uncut seed.
 
@@ -14,7 +14,7 @@
 
 **Proof:** figures above; `scripts/rc_variants.py`, `scripts/rc_diag.py`, `scripts/rc_basem7.py`; raw outputs in `results/*.json`. 8 tests in `scripts/test_ridge_cut.py`.
 
-**Why / where this is useful:** Open problem #3. Also the merge metric itself (label-sheet pairs covered by one predicted piece, with a dilated-label baseline) — it was the thing that showed the fine-tune's cost in report 03.
+**Why / where this is useful:** Open problem #3. Also the merge metric itself (label-sheet pairs covered by one predicted piece, with a dilated-label baseline). It was the thing that showed the fine-tune's cost in report 03.
 
 - [x] I verified the example and proof above on the stated data.
 

@@ -2,7 +2,7 @@
 
 **In one sentence:** A score that tracks letters instead of ink blobs, calibrated on three native 9.362 µm exams, and the result of running six community ideas for 9 µm ink models through it.
 
-**One real example:** Held-out PHerc0139 w042, hand-traced mesh, read at 9.362 µm and scored against the published 2.4 µm prediction. Plain correlation is 0.64, and it stays around 0.44 with the key shifted 150 px — it cannot tell letters from smudge. Remove a 48 µm blur from both first and correlate what is left: the released `ink_9um` scores 0.035, my fine-tune 0.11, a rolled key 0.004.
+**One real example:** Held-out PHerc0139 w042, hand-traced mesh, read at 9.362 µm and scored against the published 2.4 µm prediction. Plain correlation is 0.64, and it stays around 0.44 with the key shifted 150 px, so it cannot tell letters from smudge. Remove a 48 µm blur from both first and correlate what is left: the released `ink_9um` scores 0.035, my fine-tune 0.11, a rolled key 0.004.
 
 **Before:** Reader changes got compared by plain correlation, or by eye at 1:1 where a 1 mm letter fills the screen and looks like a blob.
 
