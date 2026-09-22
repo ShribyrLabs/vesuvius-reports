@@ -1,0 +1,431 @@
+{
+ "cubes": [
+  {
+   "cube": "s4_z5376_y1280_x2304.tif",
+   "mask": 1,
+   "cut": 1,
+   "ridge": 1,
+   "both": 1
+  },
+  {
+   "cube": "s4_z1792_y1536_x1024.tif",
+   "mask": 1,
+   "cut": 0,
+   "ridge": 0,
+   "both": 0
+  },
+  {
+   "cube": "s4_z9728_y2048_x1280.tif",
+   "mask": 3,
+   "cut": 3,
+   "ridge": 0,
+   "both": 0
+  },
+  {
+   "cube": "s4_z4352_y2048_x768.tif",
+   "mask": 0,
+   "cut": 0,
+   "ridge": 0,
+   "both": 0
+  },
+  {
+   "cube": "s4_z1280_y2048_x2048.tif",
+   "mask": 0,
+   "cut": 0,
+   "ridge": 0,
+   "both": 0
+  },
+  {
+   "cube": "s4_z6144_y2304_x2304.tif",
+   "mask": 1,
+   "cut": 0,
+   "ridge": 0,
+   "both": 0
+  },
+  {
+   "cube": "s4_z5376_y1792_x2560.tif",
+   "mask": 0,
+   "cut": 0,
+   "ridge": 0,
+   "both": 0
+  },
+  {
+   "cube": "s4_z3840_y768_x2304.tif",
+   "mask": 0,
+   "cut": 0,
+   "ridge": 0,
+   "both": 0
+  },
+  {
+   "cube": "s4_z6656_y1280_x1280.tif",
+   "mask": 0,
+   "cut": 0,
+   "ridge": 0,
+   "both": 0
+  },
+  {
+   "cube": "s4_z1024_y768_x1280.tif",
+   "mask": 1,
+   "cut": 0,
+   "ridge": 0,
+   "both": 0
+  },
+  {
+   "cube": "s4_z3584_y2304_x1536.tif",
+   "mask": 1,
+   "cut": 1,
+   "ridge": 1,
+   "both": 1
+  },
+  {
+   "cube": "s4_z8192_y1792_x2048.tif",
+   "mask": 0,
+   "cut": 0,
+   "ridge": 0,
+   "both": 0
+  },
+  {
+   "cube": "s4_z6912_y2304_x2560.tif",
+   "mask": 1,
+   "cut": 0,
+   "ridge": 0,
+   "both": 0
+  },
+  {
+   "cube": "s4_z4352_y2048_x1280.tif",
+   "mask": 1,
+   "cut": 0,
+   "ridge": 0,
+   "both": 0
+  },
+  {
+   "cube": "s4_z5120_y2048_x2304.tif",
+   "mask": 7,
+   "cut": 0,
+   "ridge": 0,
+   "both": 0
+  },
+  {
+   "cube": "s4_z7680_y1024_x1024.tif",
+   "mask": 0,
+   "cut": 0,
+   "ridge": 0,
+   "both": 0
+  },
+  {
+   "cube": "s4_z2816_y512_x2304.tif",
+   "mask": 15,
+   "cut": 3,
+   "ridge": 1,
+   "both": 1
+  },
+  {
+   "cube": "s4_z1280_y768_x1280.tif",
+   "mask": 4,
+   "cut": 1,
+   "ridge": 1,
+   "both": 1
+  },
+  {
+   "cube": "s4_z1024_y1280_x1024.tif",
+   "mask": 0,
+   "cut": 0,
+   "ridge": 0,
+   "both": 0
+  },
+  {
+   "cube": "s4_z6912_y2048_x2560.tif",
+   "mask": 0,
+   "cut": 0,
+   "ridge": 0,
+   "both": 0
+  },
+  {
+   "cube": "s4_z5888_y1024_x1536.tif",
+   "mask": 1,
+   "cut": 1,
+   "ridge": 1,
+   "both": 1
+  },
+  {
+   "cube": "s4_z2048_y768_x1536.tif",
+   "mask": 2,
+   "cut": 1,
+   "ridge": 1,
+   "both": 1
+  },
+  {
+   "cube": "s4_z1024_y1024_x1024.tif",
+   "mask": 3,
+   "cut": 1,
+   "ridge": 1,
+   "both": 1
+  },
+  {
+   "cube": "s4_z5120_y2560_x1792.tif",
+   "mask": 0,
+   "cut": 0,
+   "ridge": 0,
+   "both": 0
+  },
+  {
+   "cube": "s4_z2560_y768_x2304.tif",
+   "mask": 1,
+   "cut": 1,
+   "ridge": 1,
+   "both": 1
+  },
+  {
+   "cube": "s4_z9472_y512_x768.tif",
+   "mask": 1,
+   "cut": 0,
+   "ridge": 0,
+   "both": 0
+  },
+  {
+   "cube": "s4_z1536_y512_x1792.tif",
+   "mask": 0,
+   "cut": 0,
+   "ridge": 0,
+   "both": 0
+  },
+  {
+   "cube": "s4_z7424_y2304_x2560.tif",
+   "mask": 3,
+   "cut": 0,
+   "ridge": 0,
+   "both": 0
+  },
+  {
+   "cube": "s4_z4864_y1280_x768.tif",
+   "mask": 1,
+   "cut": 0,
+   "ridge": 0,
+   "both": 0
+  },
+  {
+   "cube": "s4_z3072_y1024_x1024.tif",
+   "mask": 0,
+   "cut": 0,
+   "ridge": 0,
+   "both": 0
+  },
+  {
+   "cube": "s4_z4352_y2304_x1024.tif",
+   "mask": 0,
+   "cut": 0,
+   "ridge": 0,
+   "both": 0
+  },
+  {
+   "cube": "s4_z3584_y2048_x2048.tif",
+   "mask": 1,
+   "cut": 1,
+   "ridge": 1,
+   "both": 1
+  },
+  {
+   "cube": "s4_z1536_y768_x2560.tif",
+   "mask": 1,
+   "cut": 0,
+   "ridge": 0,
+   "both": 0
+  },
+  {
+   "cube": "s4_z4608_y2304_x1792.tif",
+   "mask": 9,
+   "cut": 1,
+   "ridge": 1,
+   "both": 1
+  },
+  {
+   "cube": "s4_z5632_y1536_x2304.tif",
+   "mask": 1,
+   "cut": 1,
+   "ridge": 1,
+   "both": 1
+  },
+  {
+   "cube": "s4_z7680_y1024_x1280.tif",
+   "mask": 1,
+   "cut": 0,
+   "ridge": 0,
+   "both": 0
+  },
+  {
+   "cube": "s4_z768_y1792_x1536.tif",
+   "mask": 0,
+   "cut": 0,
+   "ridge": 0,
+   "both": 0
+  },
+  {
+   "cube": "s4_z6656_y2304_x2560.tif",
+   "mask": 0,
+   "cut": 0,
+   "ridge": 0,
+   "both": 0
+  },
+  {
+   "cube": "s4_z1280_y1280_x2560.tif",
+   "mask": 0,
+   "cut": 0,
+   "ridge": 0,
+   "both": 0
+  },
+  {
+   "cube": "s4_z5632_y2560_x1792.tif",
+   "mask": 5,
+   "cut": 2,
+   "ridge": 2,
+   "both": 2
+  },
+  {
+   "cube": "s4_z8448_y2048_x512.tif",
+   "mask": 1,
+   "cut": 1,
+   "ridge": 1,
+   "both": 1
+  },
+  {
+   "cube": "s4_z4864_y1024_x1792.tif",
+   "mask": 1,
+   "cut": 1,
+   "ridge": 1,
+   "both": 1
+  },
+  {
+   "cube": "s4_z1024_y1792_x2304.tif",
+   "mask": 0,
+   "cut": 0,
+   "ridge": 0,
+   "both": 0
+  },
+  {
+   "cube": "s4_z2560_y512_x2048.tif",
+   "mask": 6,
+   "cut": 1,
+   "ridge": 1,
+   "both": 1
+  },
+  {
+   "cube": "s4_z6144_y1792_x2304.tif",
+   "mask": 0,
+   "cut": 0,
+   "ridge": 0,
+   "both": 0
+  },
+  {
+   "cube": "s4_z7680_y2304_x2560.tif",
+   "mask": 0,
+   "cut": 0,
+   "ridge": 0,
+   "both": 0
+  },
+  {
+   "cube": "s4_z9984_y2048_x1024.tif",
+   "mask": 1,
+   "cut": 0,
+   "ridge": 0,
+   "both": 0
+  },
+  {
+   "cube": "s4_z2816_y1024_x2304.tif",
+   "mask": 0,
+   "cut": 0,
+   "ridge": 0,
+   "both": 0
+  },
+  {
+   "cube": "s4_z6144_y1024_x1280.tif",
+   "mask": 0,
+   "cut": 0,
+   "ridge": 0,
+   "both": 0
+  },
+  {
+   "cube": "s4_z4864_y1536_x2560.tif",
+   "mask": 15,
+   "cut": 1,
+   "ridge": 1,
+   "both": 1
+  },
+  {
+   "cube": "s4_z4864_y1792_x1024.tif",
+   "mask": 0,
+   "cut": 0,
+   "ridge": 0,
+   "both": 0
+  },
+  {
+   "cube": "s4_z2048_y1024_x2560.tif",
+   "mask": 1,
+   "cut": 0,
+   "ridge": 0,
+   "both": 0
+  },
+  {
+   "cube": "s4_z9472_y1536_x2048.tif",
+   "mask": 1,
+   "cut": 0,
+   "ridge": 0,
+   "both": 0
+  },
+  {
+   "cube": "s4_z2304_y1024_x2304.tif",
+   "mask": 0,
+   "cut": 0,
+   "ridge": 0,
+   "both": 0
+  },
+  {
+   "cube": "s4_z1024_y2048_x1792.tif",
+   "mask": 1,
+   "cut": 0,
+   "ridge": 0,
+   "both": 0
+  },
+  {
+   "cube": "s4_z5376_y2304_x1024.tif",
+   "mask": 0,
+   "cut": 0,
+   "ridge": 0,
+   "both": 0
+  },
+  {
+   "cube": "s4_z5632_y1280_x1536.tif",
+   "mask": 1,
+   "cut": 0,
+   "ridge": 0,
+   "both": 0
+  },
+  {
+   "cube": "s4_z9216_y1280_x2048.tif",
+   "mask": 0,
+   "cut": 0,
+   "ridge": 0,
+   "both": 0
+  },
+  {
+   "cube": "s4_z3840_y1536_x2560.tif",
+   "mask": 3,
+   "cut": 1,
+   "ridge": 1,
+   "both": 1
+  },
+  {
+   "cube": "s4_z6912_y1536_x1280.tif",
+   "mask": 0,
+   "cut": 0,
+   "ridge": 0,
+   "both": 0
+  }
+ ],
+ "totals": {
+  "mask": 97,
+  "cut": 23,
+  "ridge": 18,
+  "cut_and_ridge": 18,
+  "cut_only": 5
+ }
+}
