@@ -101,4 +101,3 @@ one GPU-day.
 - "Legible" calls are calibration, not evidence; the anchor is one read of four letters.
 
 ## Notes
-

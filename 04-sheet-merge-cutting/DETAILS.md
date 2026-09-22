@@ -95,4 +95,3 @@ Ridge cut: 53 min on 6 CPU workers for the 12 G-voxel band, no GPU. Field cut: 4
 Each 4-seed fit comparison: ~1 h on the 5090.
 
 ## Notes
-

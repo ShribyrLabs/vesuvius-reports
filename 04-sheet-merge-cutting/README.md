@@ -17,4 +17,3 @@
 **Why / where this is useful:** Open problem #3. Also the merge metric itself (label-sheet pairs covered by one predicted piece, with a dilated-label baseline). It was the thing that showed the fine-tune's cost in report 03.
 
 - [x] I verified the example and proof above on the stated data.
-

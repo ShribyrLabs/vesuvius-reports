@@ -17,4 +17,3 @@
 **Limits:** a 90° swap of clean cubes is not real crushing, and there is no ground truth in a crushed 9 µm region. I tried to make one from the 2.4 µm scans and it failed its own check. Only human tracing can settle whether this helps where it matters most. Also found: the hosted maps carry a ring of "surface" in the air around the scroll (up to half the lit voxels on some 0846A planes); that is the hosting pipeline, not the model.
 
 - [x] I verified the example and proof above on the stated data.
-

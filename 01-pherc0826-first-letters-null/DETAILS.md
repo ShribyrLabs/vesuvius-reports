@@ -120,4 +120,3 @@ fine-tunes 1.3 h. No cloud cost; ~17 GB of CT crop per band on local disk.
 - Nothing on this scroll has been claimed as text by anyone.
 
 ## Notes
-

@@ -81,4 +81,3 @@ same way. The merges are handled downstream instead (report 04).
 - The fine-tune's extra merges are real and cost a spiral fit if not cut (report 04).
 
 ## Notes
-
