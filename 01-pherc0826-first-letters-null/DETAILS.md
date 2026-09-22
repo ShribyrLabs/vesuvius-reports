@@ -121,4 +121,3 @@ fine-tunes 1.3 h. No cloud cost; ~17 GB of CT crop per band on local disk.
 
 ## Notes
 
-<!-- CHRIS: 3–6 sentences in your own words: why 0826, what you'd tell the next person, what you'd want from the team. -->

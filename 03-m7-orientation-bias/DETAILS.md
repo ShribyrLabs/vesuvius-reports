@@ -82,4 +82,3 @@ same way. The merges are handled downstream instead (report 04).
 
 ## Notes
 
-<!-- CHRIS: your words. This is the one you posted in #robots on 09-14; say what you'd say now. -->

@@ -96,4 +96,3 @@ Each 4-seed fit comparison: ~1 h on the 5090.
 
 ## Notes
 
-<!-- CHRIS: your words. The honest headline is section 5. -->

@@ -23,4 +23,3 @@ Cost: one RTX 5090, about 2.5 hours per band unattended, no cloud.
 
 - [x] I verified the example and proof above on the stated data.
 
-<!-- CHRIS: two or three sentences of your own here, or delete this line. -->

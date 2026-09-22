@@ -102,4 +102,3 @@ one GPU-day.
 
 ## Notes
 
-<!-- CHRIS: your words. -->

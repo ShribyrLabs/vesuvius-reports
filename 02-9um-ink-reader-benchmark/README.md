@@ -18,4 +18,3 @@ Six ideas from the channel, each retrained against a control: window jitter, a 9
 
 - [x] I verified the example and proof above on the stated data.
 
-<!-- CHRIS: your words, or delete. -->
