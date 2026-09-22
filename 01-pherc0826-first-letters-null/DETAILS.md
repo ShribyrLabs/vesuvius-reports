@@ -56,7 +56,7 @@ The gates and failure list below are the part I would have wanted before startin
 
 On PHerc0139 w035 at native 9.362 µm (a training segment of `ink_9um`), the released model's two seeds agree at
 0.948 inside the few chunks that carried training labels and draw crisp letters there; on the rest of the same sheet
-- dense text under every patch according to the 2.4 µm key: agreement drops to 0.60 and the output is blobs. So on
+(dense text under every patch according to the 2.4 µm key) agreement drops to 0.60 and the output is blobs. So on
 native 9 µm data the released model reproduces its labels rather than reading, and a null from it means nothing.
 
 Fix: project PHerc0139's published 2.4 µm ink predictions onto native 9 µm renders of 35 segments (registration
