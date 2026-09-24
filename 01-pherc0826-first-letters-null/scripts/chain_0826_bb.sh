@@ -7,7 +7,7 @@
 set -u
 export PATH="$HOME/.local/bin:$PATH"
 cd /path/to/vesuvius || exit 1
-S=/tmp/claude-1000/-home-on3x/7a52dd4f-911d-480c-890f-50685705c949/scratchpad
+S=${SCRATCH:-/tmp/vesuvius-scratch}; mkdir -p "$S"
 VV=upstream/villa/vesuvius/.venv/bin/python
 B=https://vesuvius-challenge-open-data.s3.us-east-1.amazonaws.com/PHerc0826
 VOL=$B/volumes/20250821151701-9.362um-1.2m-113keV-masked.zarr
