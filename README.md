@@ -19,9 +19,14 @@ data bucket. I reviewed the results and the text. Every number in these reports 
 and output are named in the report; the pre-registered pass/fail rules were written down before each run.
 
 **What is and is not here.** Scripts are the experiment copies that produced the numbers, MIT-licensed; some carry
-paths from my machine and are provided to show exactly what ran, not as a package. Figures derived from the open
-data carry its CC BY-NC 4.0 terms. Model checkpoints (the 9 µm reader fine-tune, ~0.8 GB; the m7 rotation
+paths from my machine and are provided to show exactly what ran, not as a package. Figures and the one derived
+data file (the 0139 ridge-cut box in report 04) come from the open data and carry its CC BY-NC 4.0 terms. Model checkpoints (the 9 µm reader fine-tune, ~0.8 GB; the m7 rotation
 fine-tune, 820 MB) are not in this repository: ask and I will put them on the data server or Hugging Face.
 
 **Machine.** One RTX 5090 (32 GB), 61 GB RAM, everything streamed from S3; no cloud compute was rented for any
 of this.
+
+**Data.** All scan data is from the Vesuvius Challenge open data bucket (`vesuvius-challenge-open-data`, CC BY-NC 4.0).
+Citation, as the data page asks: Giorgio Angelotti, Stephen Parsons, Sean Johnson, Elian Rafael Dal Prà, Johannes
+Rudolph, Paul Tafforeau, Alessandro Mirone, Paul Henderson, Hendrik Schilling, Forrest McDonald, David Josey, Youssef
+Nader, C. Seth Parker, W. Brent Seales. *Vesuvius Challenge - CT Scans of Herculaneum Papyri*. Vesuvius Challenge.
