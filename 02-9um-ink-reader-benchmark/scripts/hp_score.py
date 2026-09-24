@@ -1,6 +1,9 @@
 """Letter-scale (hp r) scores for held-out exam reads on their own grid (pred and key_native share it).
 
 usage: score.py TAG [TAG ...]   (pred files are <exam>/preds/<TAG>.tif; ft_s42 is the r1 baseline)
+
+Pixels where a pred is exactly 0 count as not covered and are skipped. A model that writes hard zeros
+inside the render is therefore scored on fewer pixels; compare on matched masks (see the 2026-09-24 addendum).
 """
 import sys
 

@@ -97,7 +97,37 @@ one GPU-day.
   exam, never across.
 - The keys are model outputs (the 2.4 µm canonical model), not human labels, except that w035's key was checked
   against staff's hand labels (r 0.59, which is roughly the ceiling for agreeing with such a key).
-- Staff's newer `hecate` 9.6 µm distillation was not scored; it is the obvious next known-first on this bench.
+- Staff's newer `hecate` 9.6 µm distillation was scored on 2026-09-24; see the addendum at the end.
 - "Legible" calls are calibration, not evidence; the anchor is one read of four letters.
 
 ## Notes
+
+## Addendum, 2026-09-24: hecate 9.6 µm scored
+
+`scrollprize/hecate` (MIT, published 2026-09-15), checkpoint `hecate_9.6um.pth`, standalone `hecate.py`, patch 16 × 64 × 64,
+central 16 of the render's 28 planes, which is the same depth window the reader above uses. Its spacing check rejects
+9.362 µm, so two input preparations: the render resampled to 9.6 µm isotropic (trilinear, 2-D output resized back to the
+key grid), and the native grid declared as 9.6. Both depth senses. bf16, batch 32; fp32 reproduces bf16 to three decimals.
+
+| exam (hp r, inked hp r) | hecate resampled | hecate native | fine-tuned reader | released `ink_9um` | CT-copy baseline |
+| --- | --- | --- | --- | --- | --- |
+| PHerc0139 w042 | **0.067** (0.084) | 0.055 (0.067) | 0.111 (0.142) | 0.035 (0.051) | 0.013 |
+| PHerc0814 p46527 | **0.041** (0.045) | 0.038 (0.041) | 0.076 (0.104) | 0.035 (0.050) | 0.014 |
+| PHerc0500P2 front | **0.039** (0.064) | 0.027 (0.042) | 0.041 (0.077) | 0.014 (0.030) | 0.009 |
+
+Reverse depth sense: 0.00 to 0.01 on every exam. Rolled-key nulls ≤ 0.011. Raw r for hecate is 0.45 to 0.47 on w042 and
+0814, the same as the released model and below the fine-tune (0.62 to 0.64): it finds the ink regions, not the letters.
+
+Checks that could have rescued it, all run on 0814:
+
+- Depth window shifted 4 planes toward either face: 0.020 and 0.016 (from 0.038). The central window is its best placement.
+- Max or mean of its 3-D probability over the evaluated planes: 0.019, below its own 2-D map.
+- Matched pixels. `hp_score.py` skips pixels where a read is exactly zero, and hecate writes exact zeros on 15 to 50 % of
+  the valid key (w042 covers 0.85 of the key against the reader's 0.93; 0814 0.46 against 0.70; 0500P2 0.50 against 0.64).
+  Scored on identical pixel sets: hecate on every pixel the reader covers 0.062 / 0.027 / 0.036; the reader restricted to
+  hecate's own pixels 0.118 / 0.122 / 0.049. The mask mismatch had been in hecate's favour.
+
+Cost: 26 min on one RTX 5090 for the twelve passes, 3 min for the checks. Verdict against the rule written before the run
+(≥ 0.20 on any exam reopens the lane, ≤ 0.13 on the two unseen-for-us exams confirms the ceiling): confirmed. The exam
+scrolls all have paired 2.4 µm / 9.362 µm scans of the kind the distillation used, so hecate may have trained on some of
+them; that makes these numbers an upper bound, not a held-out score.
