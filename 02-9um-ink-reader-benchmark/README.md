@@ -31,3 +31,5 @@ Hecate leaves a lot of the render at exactly zero and the scorer skips zeros, so
 I tried to make it do better. Shifting the depth window four planes up or down roughly halved its score on 0814. Taking the max or mean of its 3D output instead of its 2D map was worse still. So the numbers above are its best setting, not a bad one.
 
 Reading it plainly: hecate finds where the ink is about as well as the released model does, but it isn't pulling letters out of 9 µm data either. The ceiling I described above holds for staff's newest model too.
+
+Caveat, 2026-09-25: blurring a reader's output raises this score, so numbers only compare at the same blur. I rescored the models above with every output blurred by 2 and 4 px, on identical pixels, and my fine-tune stays above hecate on all three exams at every level.
