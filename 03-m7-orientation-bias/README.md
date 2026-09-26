@@ -10,7 +10,7 @@
 
 **Proof:** the two figures, `scripts/gate_eval.py` (volume-matched Dice, with CT-threshold and shifted-mesh baselines), `scripts/track_metrics.py`. Root cause is one line: nnU-Net's default augmentation rotates ±30° only. All numbers in [DETAILS.md](DETAILS.md).
 
-**Why / where this is useful:** Anyone training a 9 µm surface model. It is a training-recipe change, not an architecture change. Checkpoint (820 MB) on request.
+**Why / where this is useful:** Anyone training a 9 µm surface model. It is a training-recipe change, not an architecture change. Checkpoint (410 MB) on request.
 
 **The cost, measured afterwards:** the fine-tune merges neighbouring sheets more often, 0.60 → 0.97 merged label-sheet pairs per cube on the same 60 cubes. Two recipe fixes for that (the MemBrain rotations + Surface-Dice recipe; a parity/topological-interaction loss) both failed their pre-registered gates. Report 04 deals with the merges downstream.
 

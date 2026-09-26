@@ -20,8 +20,8 @@ and output are named in the report; the pre-registered pass/fail rules were writ
 
 **What is and is not here.** Scripts are the experiment copies that produced the numbers, MIT-licensed; some carry
 paths from my machine and are provided to show exactly what ran, not as a package. Figures and the one derived
-data file (the 0139 ridge-cut box in report 04) come from the open data and carry its CC BY-NC 4.0 terms. Model checkpoints (the 9 µm reader fine-tune, ~0.8 GB; the m7 rotation
-fine-tune, 820 MB) are not in this repository: ask and I will put them on the data server or Hugging Face.
+data file (the 0139 ridge-cut box in report 04) come from the open data and carry its CC BY-NC 4.0 terms. Model checkpoints (the 9 µm reader fine-tune, 277 MB; the m7 rotation
+fine-tune, 410 MB) are not in this repository: ask and I will put them on the data server or Hugging Face.
 
 **Machine.** One RTX 5090 (32 GB), 61 GB RAM, everything streamed from S3; no cloud compute was rented for any
 of this.

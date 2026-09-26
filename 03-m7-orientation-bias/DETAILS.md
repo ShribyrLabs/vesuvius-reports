@@ -28,7 +28,7 @@ shifted-mesh cheating baselines) and `scripts/track_metrics.py`.
 default augmentation rotates by ±30° only (`configure_rotation_dummyDA_mirroring_and_inital_patch_size`), so a
 sheet more than 30° from its training pose is out of distribution. The fix is a training-recipe change, not an
 architecture change. Scripts: `scripts/m7_label_train.py` (the fine-tune), `scripts/m7_orient.py` (transpose test),
-`scripts/predict_surface_2um.py` (inference reading the normalisation from the plans). Checkpoint (820 MB) on request.
+`scripts/predict_surface_2um.py` (inference reading the normalisation from the plans). Checkpoint (410 MB) on request.
 
 - [x] I personally verified that the example and proof above were produced on the stated data.
 
