@@ -6,7 +6,7 @@ proof, why, details, limitations). Nothing here claims text on any scroll.
 
 | # | Report | One line |
 | --- | --- | --- |
-| 01 | [PHerc0826 end-to-end First Letters run](01-pherc0826-first-letters-null/) | The published workflow run on three bands and 21 body patches of PHerc0826 with a reader validated on two unseen scrolls: no letters. Costs, gates and every failure listed. |
+| 01 | [PHerc0826 end-to-end First Letters run](01-pherc0826-first-letters-null/) | The published workflow run on three bands and 21 body patches of PHerc0826 with a reader validated on two scrolls outside its fine-tuning: no letters. Costs, gates and every failure listed. |
 | 02 | [A letter-scale benchmark for 9 µm ink readers](02-9um-ink-reader-benchmark/) | A metric that tracks letters rather than blobs, calibrated on three exams; six reader levers tested against it (all null); the measured reason 9 µm reads fail. |
 | 03 | [The m7 surface model misses sheets lying across the scan axis](03-m7-orientation-bias/) | Proven on proofread cubes; a rotation fine-tune fixes it on an unseen scroll but merges more sheets; what the trade-off costs. |
 | 04 | [Cutting sheet merges out of surface maps](04-sheet-merge-cutting/) | A zero-shot winding field and a ridge-guided cut that remove merges from a thick surface map and improve a spiral fit: and the honest finding that on the released m7 checkpoint's own probabilities the cut is nearly a no-op. |

@@ -1,4 +1,4 @@
-# PHerc0826: the First Letters workflow end to end, with a reader validated on two unseen scrolls: no letters
+# PHerc0826: the First Letters workflow end to end, with a reader validated on two scrolls outside its fine-tuning: no letters
 
 **In one sentence:** Three spiral-fitted bands and 21 published body patches of PHerc0826 (9.362 µm, 113 keV) were
 rendered and read with the released `ink_9um` checkpoints and with a reader fine-tuned to read native 9 µm text;
@@ -68,7 +68,8 @@ verified on the hand-labelled w035: r 0.588, precision 0.70 / recall 0.64 agains
 - **Unseen scroll PHerc0172 w070** (7.91 µm / 53 keV, resampled to 9.36 µm): r **0.55** against the published
   map, the same Greek lines in the same places (figure). Native 7.91 µm scored lower (0.46): the reader's home scale
   is 9.36 µm.
-- **Unseen scroll PHerc0814 p46527** (9.362 µm / 113 keV: the 0826 setting): "ΙΟΝΤ" legible by eye, r 0.66.
+- **PHerc0814 p46527, outside the fine-tune** (9.362 µm / 113 keV: the 0826 setting; correction 2026-09-26: the base
+  model ink_9um trained on this segment from its 2.4 µm scan downsampled to ~9.6 µm, so it is not unseen for the base): "ΙΟΝΤ" legible by eye, r 0.66.
 
 Scripts: `scripts/build_pseudo_labels.py`, `scripts/make_finetune_config.py`, `scripts/eval_pseudo_heldout.py`.
 
@@ -114,7 +115,8 @@ fine-tunes 1.3 h. No cloud cost; ~17 GB of CT crop per band on local disk.
   spots on 2–3 windings each, not a continuous unroll.
 - On a known scroll our automatic spiral fits carry 30–60 % of a hand-traced mesh's letter-scale signal (report 02),
   so a null on our geometry is weaker than a null on a hand-traced mesh.
-- The reader transfers to two unseen scrolls, one at the 0826 setting; it has not been shown to transfer to 0826's own
+- The reader transfers to one unseen scroll (PHerc0172) and to PHerc0814 at the 0826 setting, which its base model
+  trained on from another scan; it has not been shown to transfer to 0826's own
   material, and on ordinary carbon ink at 9 µm it reads a few letters at best (report 02). If 0826's ink is not
   denser than PHerc0139's, no current 9 µm reader will show letters on it.
 - Nothing on this scroll has been claimed as text by anyone.

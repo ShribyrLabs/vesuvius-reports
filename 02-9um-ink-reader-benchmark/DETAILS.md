@@ -47,8 +47,14 @@ recovered 12/12 on good reads and 0/12 on weak ones at 256-px blocks.
 | exam | what it is | released `ink_9um` | fine-tuned reader | null |
 | --- | --- | --- | --- | --- |
 | PHerc0139 w042, hand-traced mesh, held out | dense text | 0.035 | **0.111** (inked 0.142) | ≤ 0.004 |
-| PHerc0814 p46527, unseen scroll | "ΙΟΝΤ" legible by eye | 0.035 | **0.076** (inked 0.104): the legibility anchor | ≤ 0.011 |
+| PHerc0814 p46527, outside our fine-tune (see note) | "ΙΟΝΤ" legible by eye | 0.035 | **0.076** (inked 0.104): the legibility anchor | ≤ 0.011 |
 | PHerc0500P2 front, unseen scroll | six lines in the key, blobs in every read |: | 0.041–0.045: the known-bad | |
+
+Note, corrected 2026-09-26: PHerc0814 p46527 is not unseen for the base model. The released ink_9um trained on it
+(its 2.4 µm scan downsampled to ~9.6 µm, the only 0814 segment in its training set) and lists it as a validation
+case. Our fine-tune never saw it, and what we score is the native 9.362 µm 113 keV scan, but the base, and so the
+fine-tune built on it, has seen this papyrus and its labels, so 0.076 may be an optimistic anchor. w042 and 0500P2
+are in neither training set. Thanks to prasad for catching this.
 
 Run-to-run noise for the same recipe (two trainings, same seed policy): 0.005. That is the bar.
 

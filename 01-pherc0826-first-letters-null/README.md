@@ -6,7 +6,7 @@
 
 **Before:** One published null on this scroll, z 10 000–11 000 (millerandmuller), with the ink threshold set on the released model's own training letters.
 
-**After:** Four more regions are null (2 to 32 mm from one end of the roll, plus 24 spots through the body), with a reader you can trust more. On PHerc0172 and PHerc0814, which it never saw, it draws the same Greek lines as the published maps. Whoever tries 0826 next can skip these regions and this reader.
+**After:** Four more regions are null (2 to 32 mm from one end of the roll, plus 24 spots through the body), with a reader you can trust more. On PHerc0172, which it never saw, and PHerc0814, which only its base model trained on (from a downsampled 2.4 µm scan), it draws the same Greek lines as the published maps. Whoever tries 0826 next can skip these regions and this reader.
 
 **Proof:** `figures/control_PHerc0172_w070_unseen_scroll_read.png` is what a real read looks like with this reader. `figures/0826_low_band_w030-w080_reader_montage.png` is 0826. Every number is in [DETAILS.md](DETAILS.md).
 

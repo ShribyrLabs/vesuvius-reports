@@ -33,3 +33,5 @@ I tried to make it do better. Shifting the depth window four planes up or down r
 Reading it plainly: hecate finds where the ink is about as well as the released model does, but it isn't pulling letters out of 9 µm data either. The ceiling I described above holds for staff's newest model too.
 
 Caveat, 2026-09-25: blurring a reader's output raises this score, so numbers only compare at the same blur. I rescored the models above with every output blurred by 2 and 4 px, on identical pixels, and my fine-tune stays above hecate on all three exams at every level.
+
+Correction, 2026-09-26: PHerc0814 p46527 is not an unseen scroll for the base model. The released ink_9um trained on it (its 2.4 µm scan downsampled to about 9.6 µm) and lists it as a validation case. My fine-tune never saw it and I score the native 9.362 µm scan, but the 0.076 anchor may be optimistic because of this. w042 and 0500P2 are in neither training set. Thanks to prasad for catching it.
