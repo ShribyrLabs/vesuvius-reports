@@ -26,7 +26,10 @@ def r(a, b):
 
 
 for name, seg in EXAMS.items():
-    key = np.load(f"{seg}/key_native.npy").astype(np.float32)
+    try:
+        key = np.load(f"{seg}/key_native.npy").astype(np.float32)
+    except FileNotFoundError:  # score whichever exams are present
+        continue
     valid = key >= 0
     key = np.where(valid, key, 0)
     kh, inked = hp(key, valid), gaussian_filter(key, SMO) > 60
