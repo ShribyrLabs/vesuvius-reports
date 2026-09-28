@@ -17,7 +17,7 @@ own training letters.
 
 **After this report:** Three more bands (z 2200–3200, 3200–4200, 4300–5300: 2.4 to 32 mm from one end of the
 134 mm roll) and 24 GrowPatch body patches (z 6100–14 600, ~170 cm², Ben Black's release) are also null, this time
-with a reader that draws letters on native 9 µm scans it never trained on. Anyone planning a PHerc0826 attempt can
+with a reader that draws letters on two scrolls outside its fine-tuning. Anyone planning a PHerc0826 attempt can
 skip these regions and this reader, and knows which stages of the workflow silently fail.
 
 **Proof:** `figures/0826_low_band_w030-w080_reader_montage.png` (six windings of the best band, fine-tuned reader,

@@ -17,7 +17,7 @@ import ridge_cut as rc  # noqa: E402
 
 
 def main(out_path: Path) -> None:
-    spec = importlib.util.spec_from_file_location("sm", ROOT / "data/rgt/split_merges.py")
+    spec = importlib.util.spec_from_file_location("sm", Path(__file__).with_name("split_merges.py"))
     sm = importlib.util.module_from_spec(spec)
     spec.loader.exec_module(sm)
     base, props = sm.mo.load_net()

@@ -44,12 +44,12 @@ def ratios(vol: np.ndarray, seg: np.ndarray, sheet_vals: np.ndarray) -> float:
 
 def main(out_path: Path) -> None:
     sm = importlib.util.module_from_spec(
-        spec := importlib.util.spec_from_file_location("sm", ROOT / "data/rgt/split_merges.py")
+        spec := importlib.util.spec_from_file_location("sm", Path(__file__).with_name("split_merges.py"))
     )
     spec.loader.exec_module(sm)
     sys.path.insert(0, str(ROOT / "data/rgt"))
     diag = importlib.util.module_from_spec(
-        spec2 := importlib.util.spec_from_file_location("diag", ROOT / "data/rgt/rc_diag.py")
+        spec2 := importlib.util.spec_from_file_location("diag", Path(__file__).with_name("rc_diag.py"))
     )
     spec2.loader.exec_module(diag)
     base, props = sm.mo.load_net()

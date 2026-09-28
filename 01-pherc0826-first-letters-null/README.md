@@ -1,6 +1,6 @@
 # PHerc0826: First Letters workflow, three bands, no letters
 
-**In one sentence:** I ran the team's First Letters workflow on three bands of PHerc0826 and on Ben Black's 21 body patches, with an ink reader that was first shown to read native 9 µm text on two scrolls it never trained on. Nothing.
+**In one sentence:** I ran the team's First Letters workflow on three bands of PHerc0826 and on Ben Black's 21 body patches, with an ink reader I had first checked on two scrolls outside its fine-tuning. Nothing.
 
 **One real example:** Band z 3200–4200, spiral fit from the published tracks (12 min on a 5090), 71 windings rendered, both depth directions read. The mesh sits on the layers (gate 0.87–0.89; a staff mesh scores 0.955). The reader draws blobs on every winding. Same on z 2200–3200, z 4300–5300, and all 21 body patches.
 

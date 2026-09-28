@@ -74,7 +74,7 @@ def second_pass(p, mask, cut1, min_vox=20000):
 
 def main(out_path: Path) -> None:
     sm = importlib.util.module_from_spec(
-        spec := importlib.util.spec_from_file_location("sm", ROOT / "data/rgt/split_merges.py")
+        spec := importlib.util.spec_from_file_location("sm", Path(__file__).with_name("split_merges.py"))
     )
     spec.loader.exec_module(sm)
     base, props = sm.mo.load_net()

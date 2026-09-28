@@ -19,9 +19,17 @@ data bucket. I reviewed the results and the text. Every number in these reports 
 and output are named in the report; the pre-registered pass/fail rules were written down before each run.
 
 **What is and is not here.** Scripts are the experiment copies that produced the numbers, MIT-licensed; some carry
-paths from my machine and are provided to show exactly what ran, not as a package. Figures and the one derived
-data file (the 0139 ridge-cut box in report 04) come from the open data and carry its CC BY-NC 4.0 terms. Model checkpoints (the 9 µm reader fine-tune, 277 MB; the m7 rotation
-fine-tune, 410 MB) are not in this repository: ask and I will put them on the data server or Hugging Face.
+paths from my machine (`/path/to/vesuvius`) and are provided to show exactly what ran, not as a package. Figures and the one derived
+data file (the 0139 ridge-cut box in report 04) come from the open data and carry its CC BY-NC 4.0 terms. The 9 µm reader fine-tune is in the release
+[`reader-ft-s42`](https://github.com/ShribyrLabs/vesuvius-reports/releases/tag/reader-ft-s42) with the PHerc0814 exam;
+the m7 rotation fine-tune (410 MB) is not in this repository: ask and I will put it on the data server or Hugging Face.
+
+**Fixed 2026-09-28.** Some scripts imported helper files I had not uploaded; they are now in each report's `scripts/`
+folder, and the report 04 scripts look for each other there. `render_gpu.py` in report 01 is now the current version:
+it leaves the strip next to a mesh hole blank, as `vc_render_tifxyz` does, instead of sampling it along a wrong surface
+direction, and it no longer holds every fetched chunk in memory. Nothing the
+reports conclude changes: report 01's renders all came from `vc_render_tifxyz`, and report 02's fit comparison, re-run
+with the fix, gives 29–62 % (published: 30–60 %).
 
 **Machine.** One RTX 5090 (32 GB), 61 GB RAM, everything streamed from S3; no cloud compute was rented for any
 of this.

@@ -21,7 +21,7 @@ ROOT = Path(os.environ.get("VESUVIUS_ROOT", Path(__file__).resolve().parents[2])
 sys.path.insert(0, str(ROOT / "data/rgt"))
 import zero_shot as zs  # noqa: E402
 
-spec = importlib.util.spec_from_file_location("mo", ROOT / "scripts/m7_orient.py")
+spec = importlib.util.spec_from_file_location("mo", Path(__file__).with_name("m7_orient.py"))
 mo = importlib.util.module_from_spec(spec)
 spec.loader.exec_module(mo)
 S26 = np.ones((3, 3, 3), bool)
