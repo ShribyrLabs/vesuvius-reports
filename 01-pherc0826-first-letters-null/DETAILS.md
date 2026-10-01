@@ -8,7 +8,8 @@ directions.
 **One real example:** Starting from the team's published tracks, umbilicus and lasagna inputs for PHerc0826, I
 fitted the spiral on z 3200–4200 (30 k steps, 12 min on one RTX 5090), rendered windings w020–w090 (28 slices
 each, ~1.3 min per winding) and ran the fine-tuned reader in both depth directions (8 s per winding per direction).
-The mesh passes the on-layer gate at 0.87–0.89 (known-good 0.955, known-bad 0.70). The reader output is dense
+The mesh passes the on-layer gate at 0.87–0.89 (known-good 0.955, known-bad 0.70), which shows it runs parallel to
+the layers, not that it sits on them (correction of 2026-10-01 in README.md). The reader output is dense
 round blobs with no line structure on all 71 windings.
 
 **Before:** The only published PHerc0826 attempt (millerandmuller, z 10 000–11 000, windings 10–65) was a
@@ -18,7 +19,8 @@ own training letters.
 **After this report:** Three more bands (z 2200–3200, 3200–4200, 4300–5300: 2.4 to 32 mm from one end of the
 134 mm roll) and 24 GrowPatch body patches (z 6100–14 600, ~170 cm², Ben Black's release) are also null, this time
 with a reader that draws letters on two scrolls outside its fine-tuning. Anyone planning a PHerc0826 attempt can
-skip these regions and this reader, and knows which stages of the workflow silently fail.
+skip these surfaces, but not these regions (correction of 2026-10-01 in README.md), and knows which stages of the
+workflow silently fail.
 
 **Proof:** `figures/0826_low_band_w030-w080_reader_montage.png` (six windings of the best band, fine-tuned reader,
 forward direction: blobs); `figures/0826_low_band_w041_hottest_two_seeds.png` (the single hottest patch on the

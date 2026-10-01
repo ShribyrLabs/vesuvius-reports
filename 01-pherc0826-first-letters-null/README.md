@@ -2,11 +2,11 @@
 
 **In one sentence:** I ran the team's First Letters workflow on three bands of PHerc0826 and on Ben Black's 21 body patches, with an ink reader I had first checked on two scrolls outside its fine-tuning. Nothing.
 
-**One real example:** Band z 3200–4200, spiral fit from the published tracks (12 min on a 5090), 71 windings rendered, both depth directions read. The mesh sits on the layers (gate 0.87–0.89; a staff mesh scores 0.955). The reader draws blobs on every winding. Same on z 2200–3200, z 4300–5300, and all 21 body patches.
+**One real example:** Band z 3200–4200, spiral fit from the published tracks (12 min on a 5090), 71 windings rendered, both depth directions read. The mesh runs parallel to the layers (gate 0.87–0.89; a staff mesh scores 0.955), but see the correction at the end. The reader draws blobs on every winding. Same on z 2200–3200, z 4300–5300, and all 21 body patches.
 
 **Before:** One published null on this scroll, z 10 000–11 000 (millerandmuller), with the ink threshold set on the released model's own training letters.
 
-**After:** Four more regions are null (2 to 32 mm from one end of the roll, plus 24 spots through the body), with a reader you can trust more. On PHerc0172, which it never saw, and PHerc0814, which only its base model trained on (from a downsampled 2.4 µm scan), it draws the same Greek lines as the published maps. Whoever tries 0826 next can skip these regions and this reader.
+**After:** My surfaces in four more regions are null (2 to 32 mm from one end of the roll, plus 24 spots through the body), with a reader you can trust more. On PHerc0172, which it never saw, and PHerc0814, which only its base model trained on (from a downsampled 2.4 µm scan), it draws the same Greek lines as the published maps. Whoever tries 0826 next can skip these surfaces, but not these regions (see the correction at the end).
 
 **Proof:** `figures/control_PHerc0172_w070_unseen_scroll_read.png` is what a real read looks like with this reader. `figures/0826_low_band_w030-w080_reader_montage.png` is 0826. Every number is in [DETAILS.md](DETAILS.md).
 
@@ -22,3 +22,5 @@
 Cost: one RTX 5090, about 2.5 hours per band unattended, no cloud.
 
 - [x] I verified the example and proof above on the stated data.
+
+Correction, 2026-10-01: the on-layer gate only shows that a mesh runs parallel to the layers, not that it sits on them, as Marco Zárate's spiral-fit audit (github.com/claudepro1515/first-letters-fit-audit) points out. I ran his model-free ray test on my three fits after reproducing his published number on another PHerc0826 fit. Against 200 random-shift copies of each fit, at two ray seeds, the windings sit no closer to the sheets than chance on z 3200–4200 (p 0.78 and 0.04) and z 4300–5300 (p 0.155 and 0.625), and the result is unclear on z 2200–3200 (p 0.48 and 0.01). On his numbers, the team's spiral fit of PHerc Paris 4 passes at p ≤ 0.005. So this is a null on these surfaces, not on the papyrus of these bands.
