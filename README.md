@@ -22,6 +22,7 @@ and output are named in the report; the pre-registered pass/fail rules were writ
 paths from my machine (`/path/to/vesuvius`) and are provided to show exactly what ran, not as a package. Figures and the one derived
 data file (the 0139 ridge-cut box in report 04) come from the open data and carry its CC BY-NC 4.0 terms. The 9 µm reader fine-tune is in the release
 [`reader-ft-s42`](https://github.com/ShribyrLabs/vesuvius-reports/releases/tag/reader-ft-s42) with the PHerc0814 exam;
+the checkpoint is MIT-licensed like the scripts (see LICENSE);
 the m7 rotation fine-tune (410 MB) is not in this repository: ask and I will put it on the data server or Hugging Face.
 
 **Fixed 2026-09-28.** Some scripts imported helper files I had not uploaded; they are now in each report's `scripts/`
